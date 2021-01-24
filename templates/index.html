@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>🌼 IRIS SPECIES PREDICTOR</title>
+	<link rel="stylesheet" type="text/css" href="cssfile.css">
+</head>
+<body>
+	<div class="login">
+		<center><h1>🌼 IRIS SPECIES PREDICTOR</h1></center>
+		<center>
+			<h2>
+				Welcome to my website.
+				<br>
+				<br>
+				Enter the following data to predict the species of Iris.
+			</h2>
+		</center>
+		<br>
+		<center>
+		<form action="{{url_for('predict')}}" method="post">
+			<label>
+				SEPAL LENGTH:<br>
+				<input type="number" step="0.01" name="sepallen" required="required">
+			</label>
+			<br>
+			<br>
+			<label>
+				SEPAL WIDTH:<br>
+				<input type="number" step="0.01" name="sepalwid" required="required">
+			</label>
+			<br>
+			<br>
+			<label>
+				PETAL LENGTH:<br>
+				<input type="number" step="0.01" name="petallen" required="required">
+			</label>
+			<br>
+			<br>
+			<label>
+				PETAL WIDTH:<br>
+				<input type="number" step="0.01" name="petalwid" required="required">
+			</label>
+			<br>
+			<br>
+			<button type="submit" class="btn btn-primary btn-block btn-large">PREDICT</button>
+		</form>
+		<br>
+   		<br>
+   		<strong style="font-size:30px">{{ prediction_text }}</strong>
+		</center>
+	</div>
+</body>
+</html>

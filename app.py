@@ -17,7 +17,7 @@ def predict():
 #     print(final_feat)
 #     print(len(final_feat))
     prediction = model.predict(final_feat)
-    return render_template('index.html', prediction_text = "The species of Iris is : {}".format(prediction))
+    return render_template('index.html', prediction_text = "The species of Iris is : {}".format(prediction[0]))
 
 if __name__ == "__main__":
     app.run(debug=True)
